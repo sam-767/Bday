@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Lipsu</title>
+    <style>
+        :root {
+            --sky-blue: #87CEEB;
+            --chocolate: #7B3F00;
+            --pink: #ff69b4;
+        }
+        body, html { margin: 0; padding: 0; font-family: 'Arial', sans-serif; overflow-x: hidden; }
+        
+        /* Landing Page */
+        #landing-page {
+            height: 100vh;
+            background-color: var(--sky-blue);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .main-msg { font-style: italic; font-size: 3rem; color: white; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.1); }
+        .sub-msg { font-size: 1.2rem; max-width: 700px; line-height: 1.6; color: #333; }
+        #nav-btn { position: absolute; top: 20px; right: 20px; padding: 12px 24px; background: white; border: none; border-radius: 25px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+        /* Game Page */
+        #game-page { display: none; background: #fff5f8; min-height: 100vh; text-align: center; padding-top: 50px; }
+        #dice-msg { height: 40px; font-size: 1.5rem; color: var(--pink); font-weight: bold; margin-bottom: 10px; }
+        
+        #board {
+            width: 500px; height: 500px; margin: 0 auto; border: 8px solid var(--chocolate);
+            display: grid; grid-template-columns: repeat(10, 1fr); grid-template-rows: repeat(10, 1fr);
+            position: relative; background: #fff;
+        }
+        .cell { border: 1px solid #eee; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: #ccc; position: relative; }
+        .chocolate-cell { background-color: rgba(123, 63, 0, 0.1); }
+        
+        #token {
+            width: 40px; height: 40px; font-size: 30px; position: absolute;
+            transition: all 0.5s ease-in-out; z-index: 10; display: flex; align-items: center; justify-content: center;
+        }
+
+        #controls { margin-top: 30px; }
+        #roll-btn { padding: 15px 40px; font-size: 1.2rem; background: var(--pink); color: white; border: none; border-radius: 10px; cursor: pointer; }
+
+        /* Modals */
+        .modal { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 40px; border-radius: 20px; box-shadow: 0 0
